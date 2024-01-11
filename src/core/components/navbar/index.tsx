@@ -118,18 +118,18 @@ export default function Navbar({
             <span className="balance">{balance}</span>
           </div>
 
-          <div className="border-l h-6 border-gray-400 border-opacity-50"></div>
+          <div className="border-l h-6 border-gray-400"></div>
 
           <div className="dropdown dropdown-end" ref={dropdownRef}>
             <button
               onClick={toggleDropdown}
               className="btn btn-sm px-1 btn-ghost"
             >
-              <Bars3Icon className="w-6 h-6 bg-opacity-50" />
+              <Bars3Icon className="w-6 h-6" />
             </button>
 
             {isDropdownOpen && (
-              <div className="mt-2 menu menu-compact rounded py-2 w-[280px] max-w-[300px] absolute top-[30px] right-[30px] z-10">
+              <div className="bg-black backdrop-blur-sm bg-opacity-30 mt-2 menu menu-compact rounded-md py-2 w-[280px] max-w-[300px] absolute top-[30px] right-[30px] z-10">
                 <div className="flex gap-4 p-4">
                   <img
                     src="https://api.multiavatar.com/NOME.svg"
@@ -142,14 +142,14 @@ export default function Navbar({
                     </p>
                     <p className="text-xs flex mt-1">
                       <span className="block mt-1 mr-2 rounded-full bg-green-600 h-2 w-2"></span>{' '}
-                      <span className="opacity-50">Online agora</span>
+                      <span>Online agora</span>
                     </p>
                   </div>
                 </div>
                 <div className="px-2 text-xs item">
                   <div className="form-control">
                     <label className="label hover:font-bold cursor-pointer">
-                      <span className="label-text text-xs opacity-90">
+                      <span className="text-white label-text text-xs">
                         Sons
                       </span>
                       <label className="relative inline-flex items-center cursor-pointer">
@@ -167,7 +167,7 @@ export default function Navbar({
                 <div className="px-2 text-xs item">
                   <div className="form-control">
                     <label className="label hover:font-bold cursor-pointer">
-                      <span className="label-text text-xs opacity-90">
+                      <span className="text-white label-text text-xs">
                         Música
                       </span>
                       <label className="relative inline-flex items-center cursor-pointer">
@@ -206,7 +206,7 @@ export default function Navbar({
                     soundClick()
                   }}
                 >
-                  <label className="cursor-pointer text-white text-xs opacity-75">
+                  <label className="cursor-pointer text-white text-xs">
                     Limites de Jogo
                   </label>
                 </div>
@@ -215,7 +215,7 @@ export default function Navbar({
                   className="px-3 cursor-pointer py-3 text-sm hover:font-bold text-xs item"
                   href=""
                 >
-                  <label className="cursor-pointer text-white text-xs opacity-75">
+                  <label className="cursor-pointer text-white text-xs">
                     Suporte ao jogador Hypetech
                   </label>
                 </a>
@@ -230,7 +230,7 @@ export default function Navbar({
               soundClick()
             }}
           >
-            <ChatBubbleLeftIcon className="w-6 h-6 bg-opacity-50" />
+            <ChatBubbleLeftIcon className="w-6 h-6" />
           </button>
         </div>
         <DarkMode/>

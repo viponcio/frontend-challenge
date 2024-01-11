@@ -66,7 +66,7 @@ export const Chat = ({ show }: Props) => {
                       <div className="chat-bubble min-h-0">
                         {data.message}
                       </div>
-                      <div className="chat-footer text-xs opacity-50">
+                      <div className="chat-footer text-xs">
                         {dateToHumanReadable(data.createdAt)}
                       </div>
                     </div>
@@ -82,7 +82,7 @@ export const Chat = ({ show }: Props) => {
                       <div className="chat-bubble min-h-0">
                         {data.message}
                       </div>
-                      <div className="chat-footer text-xs opacity-50">
+                      <div className="chat-footer text-xs">
                         {dateToHumanReadable(data.createdAt)}
                       </div>
                     </div>

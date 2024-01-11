@@ -12,7 +12,7 @@ import hypetechHTP from '@/core/components/provably-fair/how-to-play'
 export const getGameLogo = (gameName: string) => {
   switch (gameName) {
     case 'motograu':
-      return <img src={motograuLogo} className="h-8 w-16" alt="" />
+      return <img src={motograuLogo} className="mt-6 h-20 w-20" alt="" />
 
     case 'wall-street':
       return <img src={wallStreetLogo} className="h-8 w-26" alt="" />

@@ -1,5 +1,4 @@
 import Modal from '@/core/components/modal';
-import { useTheme } from './ThemeContext';
 import {
   ArrowRightOnRectangleIcon,
   BanknotesIcon,
@@ -13,12 +12,6 @@ type Props = {
 }
 
 export default function HowToPlay({ show, toggle }: Props) {
-  const { isDarkMode } = useTheme();
-  const componentStyles = {
-    backgroundColor: isDarkMode ? '#333333' : '#FFFFFF',
-    color: isDarkMode ? '#FFFFFF' : '#000000',
-    // Add any other styles as needed
-  };
   return (
     <Modal show={show} toggle={toggle}>
       <div className="py-0">
@@ -27,29 +20,23 @@ export default function HowToPlay({ show, toggle }: Props) {
           style={{
             position: 'sticky',
             top: 0,
-            backgroundColor: '#141414',
+            backgroundColor: 'white',
             zIndex: 9999,
           }}
         >
           <h1 className="text-1xl uppercase font-bold pl-1 flex gap-4">
-          <div style={componentStyles}>
             <BanknotesIcon className="w-6 h-6" /> Regras do Jogo - Moto Grau
-          </div>  
           </h1>
           <button
             onClick={(_) => toggle()}
-            className="btn p-0 btn-sm hover:bg-transparent hover:text-white btn-ghost "
+            className="btn p-0 btn-sm hover:bg-transparent btn-ghost "
           >
-            <XMarkIcon className="w-6 h-6" />
+            <XMarkIcon className="w-6 h-6"/>
           </button>
         </section>
         <div className="p-4 text-sm ">
           <div className="grid lg:flex gap-8 align-center py-4">
-            <img
-              src="../images/logos/hypetech.png"
-              className="h-10 mx-auto"
-            />
-            <p className="text-xs font-semibold">
+            <p>
               A Hypetech é o último grito em entretenimento de jogo
               para uma nova geração de jogadores. Poderá ganhar várias
               vezes essa quantia em apenas alguns segundos! Nossos
@@ -61,60 +48,56 @@ export default function HowToPlay({ show, toggle }: Props) {
           </div>
           <hr />
           <div className="p-3">
-            <div className="grid lg:grid-cols-3 gap-12 mb-8">
-              <div className="image-step sm:w-[50%] md:w-[40%] lg:w-[100%]  lg:h-[200px] h-[230px] mx-auto">
-                <img
-                  className="step-image mx-auto w-full h-[80%] lg:h-[75%] md:h-[77%] sm:h-[79%] h-[77%]"
-                  src="../images/HTP/motograu/step-1.png"
-                />
+            <h1 className=' uppercase font-bold flex gap-4'>Instruções:</h1>
+            <div className="gap-12 mb-8">
+              <div>
                 <div className="description-box">
-                  <p
-                    className="text-white text-[11px] font-semibold mx-auto"
-                    style={{ lineHeight: '2' }}
-                  >
-                    Digite o valor desejado e clique em APOSTAR
+                  <p className="font-semibold mx-auto" style={{ lineHeight: '2' }}>
+                    Passo 1-Digite o valor desejado e clique em APOSTAR.
                   </p>
                 </div>
-              </div>
-              <div className="image-step sm:w-[50%] md:w-[40%] lg:w-[100%]  lg:h-[200px] h-[230px] mx-auto">
                 <img
-                  className="step-image mx-auto w-full h-[80%] lg:h-[75%] md:h-[77%] sm:h-[79%] h-[77%]"
-                  src="../images/HTP/motograu/step-2.png"
+                  src="../images/HTP/motograu/step-1.png"
                 />
+              </div>
+              <div>
                 <div className="description-box">
                   <p
-                    className="text-white text-[11px] font-semibold mx-auto"
+                    className="font-semibold mx-auto"
                     style={{ lineHeight: '2' }}
                   >
-                    Veja como o motoqueiro dá o grau e as
+                    Passo 2-Veja como o motoqueiro dá o grau e as
                     probabilidades sobem!
                   </p>
                 </div>
-              </div>
-              <div className="image-step sm:w-[50%] md:w-[40%] lg:w-[100%]  lg:h-[200px] h-[230px] mx-auto">
                 <img
-                  className="step-image mx-auto w-full h-[80%] lg:h-[75%] md:h-[77%] sm:h-[79%] h-[77%]"
-                  src="../images/HTP/motograu/step-3.png"
+                  src="../images/HTP/motograu/step-2.png"
                 />
+                
+              </div>
+              <div>
                 <div className="description-box">
                   <p
-                    className="text-white text-[11px] font-semibold mx-auto"
+                    className="font-semibold mx-auto"
                     style={{ lineHeight: '2' }}
                   >
-                    Retirar antes do motoqueiro perder o equilibrio e
+                    Passo 3-Retirar antes do motoqueiro perder o equilibrio e
                     ganhar X vezes!
                   </p>
                 </div>
+                <img
+                  src="../images/HTP/motograu/step-3.png"
+                />
               </div>
             </div>
-            <p className="text-xs font-light">
+            <p className="gap-4 ">
               No entanto, não se esqueça que tem um limite de tempo.
               Tem de se retirar antes do motoqueiro perder o
               equilibrio, caso contrário perderá a sua aposta. Jogar{' '}
               <b>Moto Grau</b> é puro jogo de azar! É aqui que se
               arrisca e ganha. Tudo depende de si!
             </p>
-            <p className="text-base font-bold text-white mt-6 mb-6">
+            <p className="text-base font-bold mt-6 mb-6">
               Como jogar e quais são as regras?
             </p>
             <li className="list">
@@ -136,7 +119,7 @@ export default function HowToPlay({ show, toggle }: Props) {
               Se não se retirar antes do motoqueiro perder o
               equilibrio, a aposta é perdida.
             </li>
-            <p className="text-base font-bold text-white mt-6 mb-6">
+            <p className="text-base font-bold mt-6 mb-6">
               Aposta automática e retirada automática
             </p>
             <li className="list">
@@ -156,11 +139,11 @@ export default function HowToPlay({ show, toggle }: Props) {
               jogo automático clicando em <b>"APOSTA AUTO"</b>.
             </li>
 
-            <p className="text-base font-bold text-white mt-6 mb-6">
+            <p className="text-base font-bold mt-6 mb-6">
               A nossa interface de jogo
             </p>
-            <p className="text-[12px] text-light text-white opacity-1">
-              Apostas ao vivo e Estatísticas
+            <p className="text-light">
+              Apostas ao vivo e Estatísticas:
             </p>
             <li className="list">
               À esquerda (sob o quadro de apostas na interface móvel)
@@ -177,8 +160,8 @@ export default function HowToPlay({ show, toggle }: Props) {
               do jogo contém informações sobre os últimos resultados
               que saíram durante os últimos jogos.
             </li>
-            <p className="text-[12px] text-light text-white opacity-1 mt-6">
-              Conversa dentro do jogo
+            <p className=" text-light mt-6">
+              Conversa dentro do jogo:
             </p>
             <li className="list">
               No canto superior direito, há uma barra de bate-papo
@@ -188,8 +171,8 @@ export default function HowToPlay({ show, toggle }: Props) {
               grandes ganhos.
             </li>
 
-            <p className="text-[12px] text-light text-white opacity-1 mt-6">
-              Lidar com problemas técnicos
+            <p className="text-ligh mt-6">
+              Lidar com problemas técnicos:
             </p>
             <li className="list">
               O operador não é responsável pela perda de uma aposta
