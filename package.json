@@ -10,7 +10,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "@heroicons/react": "^2.0.16",
+    "@heroicons/react": "^2.1.1",
     "@reduxjs/toolkit": "^1.9.1",
     "animate.css": "^4.1.1",
     "daisyui": "^2.42.1",

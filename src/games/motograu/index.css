@@ -1,4 +1,7 @@
-.motograu-game {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* .motograu-game {
   background: linear-gradient(133deg,#00000017 0%,#1c101d 50%,#462948a2 100%)!important;
 }
 
@@ -19,4 +22,4 @@
 .motograu-game .chat-container {
   background: linear-gradient(133deg,#000000 0%,#1c101d 50%,#462948 100%)!important
  }
- 
+  */

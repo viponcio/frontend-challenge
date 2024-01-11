@@ -28,7 +28,7 @@ function HomePage() {
   }, [iframeRef])
 
   return (
-    <div className="flex min-h-screen overflow-hidden bg-gradient-to-r motograu-game">
+    <div className="flex min-h-screen overflow-hidden motograu-game">
       <div className="flex w-full sm:gap-3 min-h-screen relative">
         <section className="flex flex-col h-full grow p-0">
           <div className="" style={{ zIndex: 100 }}>

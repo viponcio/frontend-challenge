@@ -30,29 +30,7 @@ module.exports = {
     scrollbar: ['rounded'],
   },
   daisyui: {
-    themes: [
-      {
-        darker: {
-          primary: '#28A909',
-
-          secondary: '#064e3b',
-
-          accent: '#eab308',
-
-          neutral: '#404040',
-
-          'base-100': '#0b0b0b',
-
-          info: '#22D3EE',
-
-          success: '#28A909',
-
-          warning: '#facc15',
-
-          error: '#cb0119',
-        },
-      },
-    ],
+    themes: ["light", "dark"],
   },
   safelist: [
     {

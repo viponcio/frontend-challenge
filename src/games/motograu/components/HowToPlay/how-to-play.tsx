@@ -1,4 +1,5 @@
-import Modal from '@/core/components/modal'
+import Modal from '@/core/components/modal';
+import { useTheme } from './ThemeContext';
 import {
   ArrowRightOnRectangleIcon,
   BanknotesIcon,
@@ -12,6 +13,12 @@ type Props = {
 }
 
 export default function HowToPlay({ show, toggle }: Props) {
+  const { isDarkMode } = useTheme();
+  const componentStyles = {
+    backgroundColor: isDarkMode ? '#333333' : '#FFFFFF',
+    color: isDarkMode ? '#FFFFFF' : '#000000',
+    // Add any other styles as needed
+  };
   return (
     <Modal show={show} toggle={toggle}>
       <div className="py-0">
@@ -25,14 +32,15 @@ export default function HowToPlay({ show, toggle }: Props) {
           }}
         >
           <h1 className="text-1xl uppercase font-bold pl-1 flex gap-4">
-            <BanknotesIcon className="opacity-50 w-6 h-6" /> Regras do
-            Jogo - Moto Grau
+          <div style={componentStyles}>
+            <BanknotesIcon className="w-6 h-6" /> Regras do Jogo - Moto Grau
+          </div>  
           </h1>
           <button
             onClick={(_) => toggle()}
             className="btn p-0 btn-sm hover:bg-transparent hover:text-white btn-ghost "
           >
-            <XMarkIcon className="w-6 h-6 opacity-30" />
+            <XMarkIcon className="w-6 h-6" />
           </button>
         </section>
         <div className="p-4 text-sm ">

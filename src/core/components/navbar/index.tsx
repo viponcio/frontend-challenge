@@ -19,6 +19,7 @@ import {
 import { getGameLogo, getHowToPlay } from '@/core/helpers'
 import GameLimitsModal from '../provably-fair/game-limits'
 import { Chat } from '../chat'
+import DarkMode from '../dark-mode'
 
 export default function Navbar({
   game,
@@ -232,6 +233,7 @@ export default function Navbar({
             <ChatBubbleLeftIcon className="w-6 h-6 bg-opacity-50" />
           </button>
         </div>
+        <DarkMode/>
       </div>
 
       <HowToPlay show={showModal} toggle={setShowModal} />
