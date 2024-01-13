@@ -3,8 +3,8 @@ import { MoonIcon, SunIcon } from "@heroicons/react/24/outline"
 import React from "react";
 
 const DarkMode = () => {
-  const [theme, setTheme] = useState(
-    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+  const [theme, setTheme] = useState<string>(
+    localStorage.getItem("theme") ?? "light"
   );
     
   const handleToggle = (e) => {
@@ -17,7 +17,7 @@ const DarkMode = () => {
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
-    const localTheme = localStorage.getItem("theme");
+    const localTheme = localStorage.getItem("theme") ?? "light";
     document.documentElement.setAttribute("data-theme", localTheme);
   }, [theme]);
 
