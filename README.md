@@ -8,7 +8,7 @@ Seja bem-vindo ao Desafio Prático de Frontend Hypetech.
 
 A minha versão da implementação foi produzir o dark mode do Moto Grau.
 
-#Motivação
+# Motivação
 
 Visto que o jogo é utilizado em outras plataformas de site de apostas, é necessário implementar a versão light e dark do jogo. Isso deixa o usuário livre para apostar conforme a sua necessidade.
 
