@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useContext } from 'react'
 import { CrashGameContext } from '@/core/providers/games/crash-game.provider'
-
+import { useTranslation } from 'react-i18next';
 type Props = {
   game: string
   balance: string
@@ -20,6 +20,7 @@ import { getGameLogo, getHowToPlay } from '@/core/helpers'
 import GameLimitsModal from '../provably-fair/game-limits'
 import { Chat } from '../chat'
 import DarkMode from '../dark-mode'
+import Flag from '../flag'
 
 export default function Navbar({
   game,
@@ -95,7 +96,7 @@ export default function Navbar({
     /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent
     )
-
+  const { t } = useTranslation();
   return (
     <div className="">
       <div className="navbar mx-auto  my-auto sm:px-3 h-12 flex items-center w-full justify-end">
@@ -110,7 +111,7 @@ export default function Navbar({
             className="btn btn-sm py-1 px-2 flex items-center text-gray-500 btn-warning gap-1 rounded-md capitalize text-sm font-normal"
           >
             <QuestionMarkCircleIcon className="h-5 w-5" />
-            <span className="hidden sm:inline">Como Jogar?</span>
+            <span className="hidden sm:inline">{t('howPlay')}</span>
           </button>
 
           <div className="text-sm text-center font-bold mr-1">
@@ -233,6 +234,7 @@ export default function Navbar({
             <ChatBubbleLeftIcon className="w-6 h-6" />
           </button>
         </div>
+        <Flag/>
         <DarkMode/>
       </div>
 
