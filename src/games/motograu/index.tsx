@@ -58,7 +58,7 @@ function HomePage() {
                   </div>
                 </div>
 
-                <Controls color="lime" position={'center'} />
+                {/* <Controls color="lime" position={'center'} /> */}
               </div>
 
               <Snackbar />

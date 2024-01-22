@@ -9,8 +9,6 @@ type Props = {
   openChatHandler?: Function
 }
 
-import If from '../conditions/if'
-
 import {
   QuestionMarkCircleIcon,
   Bars3Icon,
@@ -143,7 +141,7 @@ export default function Navbar({
                     </p>
                     <p className="text-xs flex mt-1">
                       <span className="block mt-1 mr-2 rounded-full bg-green-600 h-2 w-2"></span>{' '}
-                      <span>Online agora</span>
+                      <span>{t('online')}</span>
                     </p>
                   </div>
                 </div>
@@ -151,7 +149,7 @@ export default function Navbar({
                   <div className="form-control">
                     <label className="label hover:font-bold cursor-pointer">
                       <span className="text-white label-text text-xs">
-                        Sons
+                        {t('sound')}
                       </span>
                       <label className="relative inline-flex items-center cursor-pointer">
                         <input
@@ -169,7 +167,7 @@ export default function Navbar({
                   <div className="form-control">
                     <label className="label hover:font-bold cursor-pointer">
                       <span className="text-white label-text text-xs">
-                        Música
+                        {t('music')}
                       </span>
                       <label className="relative inline-flex items-center cursor-pointer">
                         <input
@@ -208,7 +206,7 @@ export default function Navbar({
                   }}
                 >
                   <label className="cursor-pointer text-white text-xs">
-                    Limites de Jogo
+                    {t('limit')}
                   </label>
                 </div>
 
@@ -217,7 +215,7 @@ export default function Navbar({
                   href=""
                 >
                   <label className="cursor-pointer text-white text-xs">
-                    Suporte ao jogador Hypetech
+                    {t('support')}
                   </label>
                 </a>
               </div>

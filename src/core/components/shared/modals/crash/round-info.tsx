@@ -5,6 +5,7 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 
 export interface IRoundInfo {
   id: number
@@ -29,11 +30,12 @@ export default function RoundInfoModal({
   toggle,
   data,
 }: Props) {
+  const { t } = useTranslation();
   return (
     <Modal show={show} toggle={toggle}>
       <div className="w-full rounded-md">
-        <section className="modal-header py-1 flex justify-between items-center px-3  relative">
-          <h1 className="text-1xl uppercase flex gap-4 p-3">Partida #{data.id} <span className="default-badget block mt-[-3px]">{data.extras?.point} x</span></h1>
+        <section className="modal-header flex justify-between items-center px-3  relative">
+          <h1 className="text-1xl uppercase flex gap-4 p-3">{t('game')} #{data.id} <span className="default-badget block mt-[-1px]">{data.extras?.point} x</span></h1>
           <button
             onClick={() => toggle()}
             className="btn p-0 btn-sm hover:bg-slate-900 bg-opacity25 input focus:outline-none focus:shadow-none input-sm0 hover:text-white btn-ghost "
@@ -43,13 +45,14 @@ export default function RoundInfoModal({
         </section>
 
         <div className="w-full text-sm">
-          <div className="px-6 py-4 flex flex-col gap-5">
-            <div className="flex flex-col gap-2">
+          <div className="px-6 py-4 flex flex-col">
+            <div className="flex flex-col">
               <div className="flex gap-2">
-                <ServerIcon className="w-8 h-8 pt-1 text-[#6c73a8] mt-[27px]" />
+                
                 <div>
-                  <p className="text-base font-bold text-white mt-6">Server Seed</p>
-                  <p className="text-xs">Gerado por Provably Fair</p>
+                  <ServerIcon className="w-8 h-8 mt-2 text-[#6c73a8]" />
+                  <p className="text-base font-bold">{t('serverSeed')}</p>
+                  <p className="text-xs pb-1">{t('generated')}</p>
                 </div>
 
               </div>
@@ -66,10 +69,11 @@ export default function RoundInfoModal({
 
             <div className="flex flex-col gap-2">
               <div className="flex gap-2">
-                <ShieldCheckIcon className="w-8 h-8 pt-1 text-[#6c73a8] mt-[27px]" />
+                
                 <div>
-                  <p className="text-base font-bold text-white mt-6">Hash SHA512 combinada</p>
-                  <p className="text-xs">A seed acima mencionada é convertidas em hash SHA512. Este é o resultado deste jogo</p>
+                  <ShieldCheckIcon className="w-8 h-8 mt-2 text-[#6c73a8]" />
+                  <p className="text-base font-bold">{t('hash')}</p>
+                  <p className="text-xs">{t('seed')}</p>
                 </div>
               </div>
 
@@ -83,7 +87,7 @@ export default function RoundInfoModal({
               </div>
             </div>
 
-            <div className="flex fake-box justify-between">
+            <div className="flex fake-box justify-between pt-2">
               <div className="flex flex-col gap-2">
                 <div className="text-center text-gray-400 text-xs">HEX</div>
 

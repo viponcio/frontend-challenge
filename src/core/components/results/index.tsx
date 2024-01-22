@@ -4,7 +4,7 @@ import Badge from '@/core/components/results/badge'
 import If from '@/core/components/conditions/if'
 import { CrashGameContext } from '@/core/providers/games/crash-game.provider'
 import RoundInfoModal from '../shared/modals/crash/round-info'
-
+import { useTranslation } from 'react-i18next';
 type Props = {
   variant: string
 }
@@ -30,7 +30,7 @@ export default function MultiplierResults({ variant }: Props) {
   useEffect(() => {
     getResults()
   }, [])
-
+  const { t } = useTranslation();
   return (
     <div className="w-full h-6 relative z-10">
       <If condition={!expand}>
@@ -61,7 +61,7 @@ export default function MultiplierResults({ variant }: Props) {
           <div className="rounded-md results-bar">
             <div className="border border-b-0 flex items-center justify-between relative rounded-t px-2 h-8">
               <h3 className="font-bold">
-                Histórico de Partidas
+                {t('historyGame')}
               </h3>
             </div>
 

@@ -152,7 +152,7 @@ export default function CrashForm({
       <If condition={toggleSecond && !secondEnabled}>
         <button
           onClick={toggleSecond}
-          className={`btn border-none bg-[#ffffff] bg-opacity-10 btn-xs btn-circle absolute px-1 mt-1 right-3`}
+          className={`btn border-none bg-[#ffffff] bg-opacity-10 btn-xs btn-circle absolute px-1 mt-1 right-3 top-3`}
         >
           <PlusIcon className="h-4 w-4" />
         </button>
@@ -161,7 +161,7 @@ export default function CrashForm({
       <If condition={hideSelf}>
         <button
           onClick={() => hideSelf()}
-          className={`btn border-none btn-xs bg-[#ffffff] bg-opacity-10 hover:bg-opacity-95 btn-circle absolute px-1 mt-1 right-3`}
+          className={`btn border-none btn-xs bg-[#ffffff] bg-opacity-10 hover:bg-opacity-95 btn-circle absolute px-1 mt-1 right-3 top-3`}
         >
           <MinusIcon className="h-4 w-4" />
         </button>
@@ -170,7 +170,7 @@ export default function CrashForm({
       <form
         ref={formRef}
         method="POST"
-        className="w-full xl:w-[75%] mx-auto justify-center"
+        className="w-full mx-auto justify-center"
         onSubmit={(e) => submitTransaction(e)}
       >
         <input type="hidden" name="teste" />
@@ -185,8 +185,8 @@ export default function CrashForm({
             />
           </div>
         </div>
-        <section className="flex mx-auto gap-3">
-          <div className="flex flex-col w-6/12 sm:w-6/12">
+        <section className="">
+          <div className="">
             <div className="flex mb-2 gap-2">
               <div className="w-1/2">
                 <TextField
@@ -203,9 +203,9 @@ export default function CrashForm({
                 />
               </div>
 
-              <div className="w-1/2">
-                <div className="grid gap-2 h-full grid-cols-2">
-                  <div className="col-span-1">
+              <div className="">
+                <div className="">
+                  <div className="">
                     <button
                       onClick={divideAmount}
                       type="button"
@@ -219,7 +219,7 @@ export default function CrashForm({
                     </button>
                   </div>
 
-                  <div className="col-span-1">
+                  <div className="">
                     <button
                       onClick={doubleAmount}
                       type="button"
@@ -236,7 +236,7 @@ export default function CrashForm({
               </div>
             </div>
 
-            <div className="flex gap-2">
+            <div className="">
               <TextField
                 id="valueInput"
                 name="amount"
@@ -265,7 +265,7 @@ export default function CrashForm({
             </div>
           </div>
 
-          <div className="w-6/12">
+          <div className="">
             <If
               condition={
                 transaction == null ||

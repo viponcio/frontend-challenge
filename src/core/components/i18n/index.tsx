@@ -15,12 +15,10 @@ const I18n = () => {
   return (
     <div className="flags-container">
       <Flag
-        image={BrasilFlag}
         isSelected={selectedLanguage === 'pt-BR'} 
         onClick={() => handleChangeLanguage('pt-BR')} 
       />
       <Flag
-        image={MexFlag}
         isSelected={selectedLanguage === 'es-419'} 
         onClick={() => handleChangeLanguage('es-419')} 
       />
