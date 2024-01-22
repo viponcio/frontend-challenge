@@ -46,7 +46,7 @@ export default function TransactionBar({ variant }: Props) {
         <BestTab />
       </If>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

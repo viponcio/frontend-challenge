@@ -14,7 +14,7 @@ import { CrashGameContext } from '@/core/providers/games/crash-game.provider'
 import { TransactionStatus } from '@/core/providers/enums/transaction'
 import { TransactionMode } from '@/core/providers/enums/transaction'
 import { MAX_AMOUNT, MIN_AMOUNT } from '@/core/constants'
-
+import { useTranslation } from 'react-i18next';
 type Props = {
   secondEnabled?: boolean
   toggleSecond?: Function
@@ -146,9 +146,9 @@ export default function CrashForm({
     { key: TransactionMode.COMMON, title: 'Normal' },
     { key: TransactionMode.AUTO, title: 'Auto' },
   ]
-
+  const { t } = useTranslation();
   return (
-    <div className="bg-black border border-gray-600 bg-opacity-20 border-opacity-20 crash-form w-full h-45 md:w-1/2 flex rounded-md p-3 relative">
+    <div className="mt-2 bg-black border border-gray-600 bg-opacity-20 border-opacity-20 crash-form w-full h-45 md:w-1/2 flex rounded-md p-3 relative">
       <If condition={toggleSecond && !secondEnabled}>
         <button
           onClick={toggleSecond}
@@ -192,7 +192,7 @@ export default function CrashForm({
                 <TextField
                   id="valueInput"
                   name="amount"
-                  className="text-lg text-white"
+                  className="text-lg "
                   disabled={
                     transaction.status !=
                     TransactionStatus.UNREGISTERED
@@ -203,9 +203,9 @@ export default function CrashForm({
                 />
               </div>
 
-              <div className="">
-                <div className="">
-                  <div className="">
+              <div className="w-1/2">
+                <div className="grid gap-2 h-full grid-cols-2">
+                  <div className="col-span-1">
                     <button
                       onClick={divideAmount}
                       type="button"
@@ -236,17 +236,19 @@ export default function CrashForm({
               </div>
             </div>
 
-            <div className="">
-              <TextField
-                id="valueInput"
-                name="amount"
-                disabled={
-                  transaction.status != TransactionStatus.UNREGISTERED
-                }
-                value={transaction.exitValue}
-                setValue={updateExitValue}
-                label="Auto Retirar"
-              />
+            <div className="pb-2">
+              <div className='pb-2'>
+                <TextField
+                  id="valueInput"
+                  name="amount"
+                  disabled={
+                    transaction.status != TransactionStatus.UNREGISTERED
+                  }
+                  value={transaction.exitValue}
+                  setValue={updateExitValue}
+                  label="Auto Retirar"
+                />
+              </div>
               <If
                 condition={transaction.mode == TransactionMode.AUTO}
               >
@@ -273,11 +275,11 @@ export default function CrashForm({
               }
             >
               <button
-                className={`btn border-2 hover:border-gray-300 text-[22px] hover:text-[24px] rounded-[20px] border-gray-400 ${getBackgroundColor(
+                className={`btn border-2 text-[22px] hover:text-[24px] rounded-[20px] border-gray-400 ${getBackgroundColor(
                   color
-                )} flex flex-col px-0 text-white h-full w-full`}
+                )} flex flex-col px-0 h-full w-full`}
               >
-                <span className="text-sm font-normal text-white">
+                <span className="text-sm font-normal">
                   {transaction.mode == TransactionMode.COMMON
                     ? 'Apostar'
                     : 'Aposta Auto'}
@@ -295,7 +297,7 @@ export default function CrashForm({
               }
             >
               <button
-                className={`btn border-2 text-[22px] hover:text-[24px] flex flex-col px-0 text-white h-full w-full bg-red-700 rounded-[20px] hover:bg-red-800 border-[#ffffff40] hover:border-gray-400 `}
+                className={`btn border-2 text-[22px] hover:text-[24px] flex flex-col px-0 h-full w-full bg-red-700 rounded-[20px] hover:bg-red-800 border-[#ffffff40] hover:border-gray-400 `}
                 onClick={() => cancelTransaction(position)}
               >
                 <If condition={transaction.autoStarted}>
@@ -322,7 +324,7 @@ export default function CrashForm({
             >
               <div className="flex flex-col w-full h-full">
                 <button
-                  className={`btn border-2 text-[22px] hover:text-[24px] bg-red-700 rounded-[20px] hover:bg-red-800 border-[#ffffff40] flex flex-col px-0 text-white h-full w-full`}
+                  className={`btn border-2 text-[22px] hover:text-[24px] bg-red-700 rounded-[20px] hover:bg-red-800 border-[#ffffff40] flex flex-col px-0 h-full w-full`}
                   onClick={cancelFuterTransaction}
                 >
                   <If condition={transaction.autoStarted}>
@@ -345,7 +347,7 @@ export default function CrashForm({
               }
             >
               <button
-                className={`btn border-2 text-[22px] hover:text-[24px] bg-[#ff7700] rounded-[20px] hover:bg-[#d26200] border-[#ffffff40] flex flex-col px-0 text-white h-full w-full`}
+                className={`btn border-2 text-[22px] hover:text-[24px] bg-[#ff7700] rounded-[20px] hover:bg-[#d26200] border-[#ffffff40] flex flex-col px-0 h-full w-full`}
                 onClick={() => cashOut(position)}
               >
                 <If condition={transaction.autoStarted}>
