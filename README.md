@@ -14,7 +14,62 @@ Visto que o jogo é utilizado em outras plataformas de site de apostas, é neces
 
 A partir da ideia de desenvolver o tema dark e light, utilizei Daisy UI para me ajudar na tarefa pois vi que o sistema já tinha essa dependência.
 
-Com o dark mode já funcionando eu fui melhorar a experiência do usuário em partes das quais a usabilidade tinha sido comprometida. As principais mudanças foram no chat, navbar, badges, como jogar, rodapé quando clica no modal de provably fair.  
+Com o dark mode já funcionando eu fui melhorar a experiência do usuário em partes das quais a usabilidade tinha sido comprometida. As principais mudanças foram no chat, navbar, badges, como jogar, rodapé quando clica no modal de provably fair.
+
+Compatibilidade do sistema com o mundo real foi outra motivação usada para traduzir a página para o espanhol pois o público alvo é latam, a acessibilidade e engajamento do usuário, a audiência pode facilmente navegar e entender as informações.
+
+## Antes e Depois
+
+Para melhor entendimento, essa seção deve ser lida com a primeira captura de tela como o antes e a segunda captura como depois da minha implementação.
+<div class="absolute">
+	<img class="left" width="250px" src="https://raw.githubusercontent.com/viponcio/frontend-challenge/master/src/assets/img/Captura%20de%20tela%20de%202024-01-23%2011-52-49.png" alt="imagem das regras do jogo" /> 
+	<img width="250px" src="https://raw.githubusercontent.com/viponcio/frontend-challenge/master/src/assets/img/Captura%20de%20tela%20de%202024-01-23%2011-55-08.png" alta="imagem das regas do jogo" />
+</div>
+Alterei as imagens do modal de “Como Jogar?” Melhorei a fonte das palavras.
+<br/>
+<br/>
+<div class="absolute">
+	<img class="left" width="250px" src="https://raw.githubusercontent.com/viponcio/frontend-challenge/master/src/assets/img/Captura%20de%20tela%20de%202024-01-23%2012-03-20.png" alt="imagem do menu de consigurações do jogo" /> 
+	<img width="250px" src="https://raw.githubusercontent.com/viponcio/frontend-challenge/master/src/assets/img/Captura%20de%20tela%20de%202024-01-23%2012-02-39.png" alta="imagem do menu de consigurações do jogo" />
+</div>
+A comunicação desse menu estava comprometida, adicionei um fundo um pouco mais escuro para que o entendimento seja excelente.
+<br/>
+<br/>
+<div class="absolute">
+	<img class="left" width="250px" src="https://raw.githubusercontent.com/viponcio/frontend-challenge/master/src/assets/img/Captura%20de%20tela%20de%202024-01-23%2014-13-45.png" alt="imagem do menu de chat do jogo" /> 
+	<img width="250px" src="https://raw.githubusercontent.com/viponcio/frontend-challenge/master/src/assets/img/Captura%20de%20tela%20de%202024-01-23%2014-14-01.png" alta="imagem do menu de chat do jogo" />
+</div>
+Coloquei o mesmo css tanto para o chat e para as configurações, assim mantendo a mesma consistência e padrão.
+<br/>
+<br/>
+<div class="absolute">
+	<img class="left" width="250px" src="https://raw.githubusercontent.com/viponcio/frontend-challenge/master/src/assets/img/Captura%20de%20tela%20de%202024-01-23%2014-18-42.png" alt="imagem do menu de Aposta e Histórico do jogo" /> 
+	<img width="250px" src="https://raw.githubusercontent.com/viponcio/frontend-challenge/master/src/assets/img/Captura%20de%20tela%20de%202024-01-23%2014-19-04.png" alta="imagem do menu de Aposta e Histórico do jogo" />
+</div>
+Como esse menu de Aposta e Histórico era grande, diminuí ele para caber o menu que estava abaixo do jogo.
+
+<br/>
+<br/>
+<div class="absolute">
+	<img class="left" width="450px" src="https://raw.githubusercontent.com/viponcio/frontend-challenge/master/src/assets/img/Captura%20de%20tela%20de%202024-01-23%2014-24-03.png" alt="imagem do menu de apostar do jogo" /> 
+	<img width="250px" src="https://raw.githubusercontent.com/viponcio/frontend-challenge/master/src/assets/img/Captura%20de%20tela%20de%202024-01-23%2014-24-29.png" alta="imagem do menu de apostar do jogo" />
+</div>
+O menu que antes era abaixo do jogo eu coloquei para o lado esquerdo para deixar o jogo maior.
+<br/>
+<br/>
+<div class="absolute">
+	<img class="left" width="750px" src="https://raw.githubusercontent.com/viponcio/frontend-challenge/master/src/assets/img/Captura%20de%20tela%20de%202024-01-23%2014-26-50.png" alt="imagem do menu de apostar do jogo" /> 
+	<img width="750px" src="https://raw.githubusercontent.com/viponcio/frontend-challenge/master/src/assets/img/Captura%20de%20tela%20de%202024-01-23%2014-27-14.png" alta="imagem do menu de apostar do jogo" />
+</div>
+A visualização do histórico era pequena, eu aumentei a fonte e coloquei o background branco com transparência para usar a cor do jogo.
+<br/>
+<br/>
+<div class="absolute">
+	<img class="left" width="750px" src="https://raw.githubusercontent.com/viponcio/frontend-challenge/master/src/assets/img/Captura%20de%20tela%20de%202024-01-23%2014-37-54.png" alt="imagem do menu de apostar do jogo" /> 
+	<img width="750px" src="https://raw.githubusercontent.com/viponcio/frontend-challenge/master/src/assets/img/Captura%20de%20tela%20de%202024-01-23%2014-41-57.png" alta="imagem do menu de apostar do jogo" />
+</div>
+
+Interface com Dark e Light Mode.
 
 ## Sobre o Motograu
 
